@@ -18,7 +18,7 @@ const Ticket: React.FC = () => {
 
   const handleSubmit = async () => {
     try {
-        const response = await axios.post('http://127.0.0.1:8000/zealthy/user_query', input);
+        const response = await axios.post('https://zealthy-backend.azurewebsites.net/zealthy/user_query', input);
         console.log(response)
         
         if (response.status === 200) {

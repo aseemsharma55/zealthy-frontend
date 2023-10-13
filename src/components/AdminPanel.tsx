@@ -16,7 +16,7 @@ const AdminPanel: React.FC = () => {
   useEffect(() => {
     const fetchTickets = async () => {
         try {
-            const response = await axios.get('http://127.0.0.1:8000/zealthy/fetch_users');
+            const response = await axios.get('https://zealthy-backend.azurewebsites.net/zealthy/fetch_users');
             console.log(response.data.data);
             setTickets(response.data.data);
             setIsLoading(false);  // Set loading to false once data is fetched
@@ -44,7 +44,7 @@ const AdminPanel: React.FC = () => {
   const handleSubmit = async (index:number,row: UserTicket) => {
     try {
       console.log(row)
-      const response = await axios.post('http://127.0.0.1:8000/zealthy/update', {'email':row.email,'status':row.status});
+      const response = await axios.post('https://zealthy-backend.azurewebsites.net/zealthy/update', {'email':row.email,'status':row.status});
       console.log(response)
       
       if (response.status === 200) {
