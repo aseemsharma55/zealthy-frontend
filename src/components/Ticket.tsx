@@ -62,11 +62,11 @@ const Ticket: React.FC = () => {
         <button type="button" className="btn btn-primary" onClick={handleSubmit}>Submit</button>
       </form>
 
-      <div className="mt-4">
+      {/* <div className="mt-4">
         <h3>Check your ticket status</h3>
         <button className="btn btn-info" onClick={handleCheckUpdate}>Show me update</button>
         {status && <p className="mt-2">Your ticket status: <strong>{status}</strong></p>}
-      </div>
+      </div> */}
     </div>
   );
 };
